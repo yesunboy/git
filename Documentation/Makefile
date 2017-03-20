@@ -260,7 +260,6 @@ install-man: man
 	$(INSTALL) -m 644 $(DOC_MAN1) $(DESTDIR)$(man1dir)
 	$(INSTALL) -m 644 $(DOC_MAN5) $(DESTDIR)$(man5dir)
 	$(INSTALL) -m 644 $(DOC_MAN7) $(DESTDIR)$(man7dir)
-	$(MAKE) install-man-l10n
 
 install-man-l10n: $(DOC_MAN1_L10N)
 	$(INSTALL) -d -m 755 $(DESTDIR)$(mandir)/$(firstword $(subst /man1/, ,$(subst po/,,$<)))/man1
