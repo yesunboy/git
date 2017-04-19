@@ -63,6 +63,11 @@ int string_list_find_insert_index(const struct string_list *list, const char *st
 struct string_list_item *string_list_insert(struct string_list *list, const char *string);
 
 /*
+ * Removes the given string from the sorted list.
+ */
+void string_list_remove(struct string_list *list, const char *string, int free_util);
+
+/*
  * Checks if the given string is part of a sorted list. If it is part of the list,
  * return the coresponding string_list_item, NULL otherwise.
  */
